@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +19,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
 
     <!-- ====== GOOGLE FONTS (Poppins) ====== -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
 
     <style>
         /* ============================================================
@@ -43,27 +45,33 @@
             padding: 0.8rem 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
+
         .navbar-custom .navbar-brand {
             font-weight: 600;
             color: #d4af37 !important;
             letter-spacing: 1px;
         }
+
         .navbar-custom .navbar-brand i {
             margin-right: 8px;
         }
+
         .navbar-custom .nav-link {
             color: #eaeaea !important;
             font-weight: 400;
             transition: color 0.25s ease;
             margin: 0 0.5rem;
         }
+
         .navbar-custom .nav-link i {
             margin-right: 6px;
             font-size: 0.9rem;
         }
+
         .navbar-custom .nav-link:hover {
             color: #d4af37 !important;
         }
+
         .navbar-custom .nav-link.active {
             color: #d4af37 !important;
             border-bottom: 2px solid #d4af37;
@@ -82,28 +90,35 @@
         }
 
         /* --- TITRES --- */
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-weight: 600;
             letter-spacing: -0.3px;
         }
+
         h1 {
             color: #1a1f2b;
             border-left: 5px solid #d4af37;
             padding-left: 1rem;
         }
+
         h1 i {
             color: #d4af37;
             margin-right: 10px;
         }
+
         h2 {
             color: #1a1f2b;
             font-size: 1.6rem;
             margin-bottom: 1.5rem;
         }
+
         h2 i {
             color: #d4af37;
             margin-right: 10px;
         }
+
         .section-title {
             border-bottom: 2px solid #f0f0f0;
             padding-bottom: 0.7rem;
@@ -120,9 +135,11 @@
             border-radius: 40px;
             transition: all 0.2s ease;
         }
+
         .btn-gold i {
             margin-right: 8px;
         }
+
         .btn-gold:hover {
             background-color: #c09c2a;
             color: #0f0f0f;
@@ -139,9 +156,11 @@
             padding: 0.5rem 1.8rem;
             transition: all 0.2s ease;
         }
+
         .btn-outline-gold i {
             margin-right: 8px;
         }
+
         .btn-outline-gold:hover {
             background: #d4af37;
             color: #fff;
@@ -157,10 +176,12 @@
             text-align: center;
             font-size: 0.95rem;
         }
+
         .footer-custom i {
             color: #d4af37;
             margin: 0 4px;
         }
+
         .footer-custom span {
             color: #d4af37;
             font-weight: 500;
@@ -174,9 +195,11 @@
             padding: 1.5rem;
             transition: box-shadow 0.2s ease;
         }
+
         .card-soft:hover {
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
         }
+
         .card-soft i {
             color: #d4af37;
             font-size: 1.8rem;
@@ -185,13 +208,16 @@
         }
 
         /* --- FORMULAIRES --- */
-        .form-control, .form-select {
+        .form-control,
+        .form-select {
             border-radius: 10px;
             border: 1px solid #dde0e3;
             background: #fafbfc;
             font-weight: 400;
         }
-        .form-control:focus, .form-select:focus {
+
+        .form-control:focus,
+        .form-select:focus {
             border-color: #d4af37;
             box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.2);
         }
@@ -203,6 +229,7 @@
             height: 6px !important;
             border-radius: 10px !important;
         }
+
         .ui-slider .ui-slider-handle {
             background: #1a1f2b !important;
             border: 2px solid #d4af37 !important;
@@ -212,6 +239,7 @@
             top: -7px !important;
             cursor: pointer;
         }
+
         .ui-slider .ui-slider-range {
             background: #d4af37 !important;
         }
@@ -227,11 +255,13 @@
             overflow: hidden;
             transition: width 0.2s ease, height 0.2s ease;
         }
+
         #imageLayer img {
             width: 100%;
             height: 100%;
             object-fit: fill;
         }
+
 
         /* --- PANNEAU PUBLICITAIRE (couches en rotation) --- */
         #panneauContainer {
@@ -244,6 +274,7 @@
             background: #1a1f2b;
             overflow: hidden;
         }
+
         .couche-pub {
             position: absolute;
             top: 0;
@@ -262,10 +293,12 @@
             transition: opacity 0.5s ease, transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
             backface-visibility: hidden;
         }
+
         .couche-pub i {
             font-size: 2.5rem;
             margin-right: 12px;
         }
+
         .couche-pub.active {
             opacity: 1;
             transform: rotate(0deg) scale(1);
@@ -278,6 +311,7 @@
             font-weight: 400;
             color: #1a1f2b;
         }
+
         .dataTables_wrapper .dataTables_paginate .paginate_button.current {
             background: #d4af37 !important;
             color: #1a1f2b !important;
@@ -292,14 +326,17 @@
             padding: 1.2rem 1.5rem;
             border-left: 4px solid #d4af37;
         }
+
         .stats-grid .stat-item {
             font-weight: 500;
             color: #1a1f2b;
         }
+
         .stats-grid .stat-item i {
             color: #d4af37;
             width: 24px;
         }
+
         .stats-grid .stat-value {
             color: #d4af37;
             font-weight: 600;
@@ -311,6 +348,7 @@
             .main-content {
                 padding: 1.5rem 1rem;
             }
+
             #panneauContainer {
                 width: 100%;
                 height: 180px;
@@ -318,6 +356,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- ============================================================
@@ -328,470 +367,686 @@
             <div class="container">
                 <a class="navbar-brand" href="#"><i class="fas fa-cubes"></i> PROJET DHTML</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                aria-controls="mainNav" aria-expanded="false" aria-label="Basculer menu">
-                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto" id="menuNav">
-                    <li class="nav-item"><a class="nav-link active" data-page="accueil" href="#"><i class="fas fa-house"></i> Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" data-page="cramer" href="#"><i class="fas fa-calculator"></i> Cramer</a></li>
-                    <li class="nav-item"><a class="nav-link" data-page="resize" href="#"><i class="fas fa-expand"></i> Redimensionner</a></li>
-                    <li class="nav-item"><a class="nav-link" data-page="panneau" href="#"><i class="fas fa-ad"></i> Panneau</a></li>
-                    <li class="nav-item"><a class="nav-link" data-page="datatable" href="#"><i class="fas fa-table"></i> Datatable</a></li>
-                </ul>
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Basculer menu">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto" id="menuNav">
+                        <li class="nav-item"><a class="nav-link active" data-page="accueil" href="#"><i
+                                    class="fas fa-house"></i> Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="cramer" href="#"><i
+                                    class="fas fa-calculator"></i> Cramer</a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="resize" href="#"><i
+                                    class="fas fa-expand"></i> Redimensionner</a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="panneau" href="#"><i class="fas fa-ad"></i>
+                                Panneau</a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="datatable" href="#"><i
+                                    class="fas fa-table"></i> Datatable</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
-<main class="container">
-    <div class="main-content" id="zoneAffichage">
-        <!-- ============================================
+    <main class="container">
+        <div class="main-content" id="zoneAffichage">
+            <!-- ============================================
         CONTENU PAR DÉFAUT : ACCUEIL
         ============================================ -->
-        <div id="page-accueil">
-            <h1><i class="fas fa-rocket"></i> Bienvenue sur le projet DHTML</h1>
-            <p class="lead" style="color:#4a4f5a;">Application web moderne pour la résolution linéaire, le redimensionnement d'images, un panneau publicitaire animé et une datatable enrichie.</p>
-            <hr class="my-4" style="border-color:#eaeef2;" />
-            <div class="row g-4 mt-3">
-                <div class="col-md-3 col-6 text-center">
-                    <div class="card-soft">
-                        <i class="fas fa-calculator"></i>
-                        <strong>Cramer</strong><br /><small>3 équations 3 inconnues</small>
+            <div id="page-accueil">
+                <h1><i class="fas fa-rocket"></i> Bienvenue sur le projet DHTML</h1>
+                <p class="lead" style="color:#4a4f5a;">Application web moderne pour la résolution linéaire, le
+                    redimensionnement d'images, un panneau publicitaire animé et une datatable enrichie.</p>
+                <hr class="my-4" style="border-color:#eaeef2;" />
+                <div class="row g-4 mt-3">
+                    <div class="col-md-3 col-6 text-center">
+                        <div class="card-soft">
+                            <i class="fas fa-calculator"></i>
+                            <strong>Cramer</strong><br /><small>3 équations 3 inconnues</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 text-center">
+                        <div class="card-soft">
+                            <i class="fas fa-expand"></i>
+                            <strong>Redimensionner</strong><br /><small>Sliders interactifs</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 text-center">
+                        <div class="card-soft">
+                            <i class="fas fa-ad"></i>
+                            <strong>Panneau</strong><br /><small>Rotation de couches</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 text-center">
+                        <div class="card-soft">
+                            <i class="fas fa-chart-bar"></i>
+                            <strong>Datatable</strong><br /><small>Stats + graphique</small>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 text-center">
-                    <div class="card-soft">
-                        <i class="fas fa-expand"></i>
-                        <strong>Redimensionner</strong><br /><small>Sliders interactifs</small>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 text-center">
-                    <div class="card-soft">
-                        <i class="fas fa-ad"></i>
-                        <strong>Panneau</strong><br /><small>Rotation de couches</small>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 text-center">
-                    <div class="card-soft">
-                        <i class="fas fa-chart-bar"></i>
-                        <strong>Datatable</strong><br /><small>Stats + graphique</small>
-                    </div>
+                <div class="mt-5 text-muted small">
+                    <i class="fas fa-arrow-right"></i> Utilisez le menu ci-dessus pour naviguer entre les
+                    fonctionnalités.
                 </div>
             </div>
-            <div class="mt-5 text-muted small">
-                <i class="fas fa-arrow-right"></i> Utilisez le menu ci-dessus pour naviguer entre les fonctionnalités.
-            </div>
-        </div>
 
-        <!-- ============================================
+            <!-- ============================================
         PAGE CRAMER (masquée par défaut)
         ============================================ -->
-        <div id="page-cramer" style="display:none;">
-            <h2 class="section-title"><i class="fas fa-calculator"></i> Résolution par la méthode de Cramer</h2>
-            <p class="text-muted"><i class="fas fa-pen"></i> Saisissez les coefficients du système linéaire à 3 inconnues.</p>
+            <div id="page-cramer" style="display:none;">
+                <h2 class="section-title"><i class="fas fa-calculator"></i> Résolution par la méthode de Cramer</h2>
+                <p class="text-muted"><i class="fas fa-pen"></i> Saisissez les coefficients du système linéaire à 3
+                    inconnues.</p>
 
-            <div class="table-responsive">
-                <table class="table table-bordered text-center" style="max-width:700px; margin:0 auto; background:#fafbfc;">
-                    <thead class="table-light">
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center"
+                        style="max-width:700px; margin:0 auto; background:#fafbfc;">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Équation</th>
+                                <th>X₁</th>
+                                <th>X₂</th>
+                                <th>X₃</th>
+                                <th>=</th>
+                                <th>B</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>①</td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="a11" value="0"
+                                        step="any" /></td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="a12" value="0"
+                                        step="any" /></td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="a13" value="0"
+                                        step="any" /></td>
+                                <td>=</td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="b1" value="0"
+                                        step="any" /></td>
+                            </tr>
+                            <tr>
+                                <td>②</td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="a21" value="0"
+                                        step="any" /></td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="a22" value="0"
+                                        step="any" /></td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="a23" value="0"
+                                        step="any" /></td>
+                                <td>=</td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="b2" value="0"
+                                        step="any" /></td>
+                            </tr>
+                            <tr>
+                                <td>③</td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="a31" value="0"
+                                        step="any" /></td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="a32" value="0"
+                                        step="any" /></td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="a33" value="0"
+                                        step="any" /></td>
+                                <td>=</td>
+                                <td><input type="number" class="form-control form-control-sm coef" id="b3" value="0"
+                                        step="any" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="text-center my-4">
+                    <button class="btn btn-gold" id="btnResolver"><i class="fas fa-play"></i> RÉSOUDRE</button>
+                </div>
+
+                <div id="resultatCramer" class="card-soft text-center" style="max-width:600px; margin:0 auto;">
+                    <p><i class="fas fa-x"></i> <strong>X₁ =</strong> <span id="x1">—</span> &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <i class="fas fa-x"></i> <strong>X₂ =</strong> <span id="x2">—</span> &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <i class="fas fa-x"></i> <strong>X₃ =</strong> <span id="x3">—</span>
+                    </p>
+                    <p class="text-muted small" id="detailDet" style="margin-bottom:0;">∆ = — &nbsp; ∆₁ = — &nbsp; ∆₂ =
+                        — &nbsp; ∆₃ = —</p>
+                </div>
+            </div>
+
+            <!-- ============================================
+        PAGE REDIMENSIONNER (masquée)
+        ============================================ -->
+            <!-- ============================================ -->
+            <div id="page-resize" style="display:none;">
+                <h2 class="section-title"><i class="fas fa-expand"></i> Redimensionner une image</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card-soft">
+                            <label class="fw-semibold"><i class="fas fa-arrow-left-right"></i> Largeur : <span
+                                    id="largeurValue">300</span> px</label>
+                            <div id="sliderLargeur" class="mt-2"></div>
+
+                            <label class="fw-semibold mt-3"><i class="fas fa-arrow-up-down"></i> Hauteur : <span
+                                    id="hauteurValue">200</span> px</label>
+                            <div id="sliderHauteur" class="mt-2"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="imageLayer" style="width:300px; height:200px;">
+                            <img src="https://picsum.photos/seed/projet/400/300" alt="Image dynamique" />
+                        </div>
+                        <p class="text-muted small mt-2 text-center"><i class="fas fa-image"></i> Image aléatoire via
+                            picsum.photos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+        PAGE PANNEAU PUBLICITAIRE (masquée)
+        ============================================ -->
+            <div id="page-panneau" style="display:none;">
+                <h2 class="section-title"><i class="fas fa-ad"></i> Panneau publicitaire animé</h2>
+                <p class="text-muted"><i class="fas fa-sync"></i> Les couches tournent et s'affichent en alternance.</p>
+                <div id="panneauContainer">
+                    <div class="couche-pub active" style="background:#1a1f2b; color:#d4af37; font-size:2rem;">
+                        <i class="fas fa-star"></i> Star
+                    </div>
+                    <div class="couche-pub" style="background:#2c3e50; color:#ecf0f1;">
+                        <i class="fas fa-tags"></i> Offre spéciale
+                    </div>
+                    <div class="couche-pub" style="background:#d4af37; color:#1a1f2b;">
+                        <i class="fas fa-percent"></i> -30%
+                    </div>
+                    <div class="couche-pub" style="background:#1a1f2b; color:#fff;">
+                        <i class="fas fa-truck"></i> Livraison offerte
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button class="btn btn-outline-gold" id="togglePanneau"><i class="fas fa-pause"></i> Pause</button>
+                </div>
+            </div>
+
+            <!-- ============================================
+        PAGE DATATABLE (masquée)
+        ============================================ -->
+            <div id="page-datatable" style="display:none;">
+                <h2 class="section-title"><i class="fas fa-table"></i> Datatable – Gestion des produits</h2>
+
+                <table id="tableProduits" class="table table-striped table-hover" style="width:100%;">
+                    <thead>
                         <tr>
-                            <th>Équation</th>
-                            <th>X₁</th>
-                            <th>X₂</th>
-                            <th>X₃</th>
-                            <th>=</th>
-                            <th>B</th>
+                            <th>Désignation</th>
+                            <th>Quantité</th>
+                            <th>Prix (Ar)</th>
+                            <th>Montant (Ar)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>①</td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="a11" value="2" step="any" /></td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="a12" value="1" step="any" /></td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="a13" value="-1" step="any" /></td>
-                            <td>=</td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="b1" value="3" step="any" /></td>
+                            <td>Riz</td>
+                            <td contenteditable="true">10</td>
+                            <td>4000</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>②</td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="a21" value="1" step="any" /></td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="a22" value="-2" step="any" /></td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="a23" value="3" step="any" /></td>
-                            <td>=</td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="b2" value="5" step="any" /></td>
+                            <td>Manioc</td>
+                            <td contenteditable="true">20</td>
+                            <td>3000</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>③</td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="a31" value="3" step="any" /></td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="a32" value="2" step="any" /></td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="a33" value="-2" step="any" /></td>
-                            <td>=</td>
-                            <td><input type="number" class="form-control form-control-sm coef" id="b3" value="1" step="any" /></td>
+                            <td>Sucre</td>
+                            <td contenteditable="true">50</td>
+                            <td>1000</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Patate</td>
+                            <td contenteditable="true">40</td>
+                            <td>500</td>
+                            <td></td>
                         </tr>
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <th><i class="fas fa-calculator"></i> TOTAL</th>
+                            <th id="totalQte">—</th>
+                            <th></th>
+                            <th id="totalMontant">—</th>
+                        </tr>
+                    </tfoot>
                 </table>
-            </div>
 
-            <div class="text-center my-4">
-                <button class="btn btn-gold" id="btnResolver"><i class="fas fa-play"></i> RÉSOUDRE</button>
-            </div>
-
-            <div id="resultatCramer" class="card-soft text-center" style="max-width:600px; margin:0 auto;">
-                <p><i class="fas fa-x"></i> <strong>X₁ =</strong> <span id="x1">—</span> &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-x"></i> <strong>X₂ =</strong> <span id="x2">—</span> &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-x"></i> <strong>X₃ =</strong> <span id="x3">—</span></p>
-                <p class="text-muted small" id="detailDet" style="margin-bottom:0;">∆ = — &nbsp; ∆₁ = — &nbsp; ∆₂ = — &nbsp; ∆₃ = —</p>
-            </div>
-        </div>
-
-        <!-- ============================================
-        PAGE REDIMENSIONNER (masquée)
-        ============================================ -->
-        <div id="page-resize" style="display:none;">
-            <h2 class="section-title"><i class="fas fa-expand"></i> Redimensionner une image</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card-soft">
-                        <label class="fw-semibold"><i class="fas fa-arrow-left-right"></i> Largeur : <span id="largeurValue">300</span> px</label>
-                        <div id="sliderLargeur" class="mt-2"></div>
-
-                        <label class="fw-semibold mt-3"><i class="fas fa-arrow-up-down"></i> Hauteur : <span id="hauteurValue">200</span> px</label>
-                        <div id="sliderHauteur" class="mt-2"></div>
+                <!-- Statistiques + graphique -->
+                <div class="row g-4 mt-2">
+                    <div class="col-md-5">
+                        <div class="stats-grid">
+                            <div class="stat-item"><i class="fas fa-chart-line"></i> Prix moyen : <span
+                                    class="stat-value" id="prixMoyen">—</span> Ar</div>
+                            <div class="stat-item"><i class="fas fa-arrow-down"></i> Prix minimal : <span
+                                    class="stat-value" id="prixMin">—</span> Ar</div>
+                            <div class="stat-item"><i class="fas fa-arrow-up"></i> Prix maximal : <span
+                                    class="stat-value" id="prixMax">—</span> Ar</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <canvas id="chartPrix" width="300" height="150" style="max-width:100%;"></canvas>
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <div id="imageLayer" style="width:300px; height:200px;">
-                        <img src="https://picsum.photos/seed/projet/400/300" alt="Image dynamique" />
-                    </div>
-                    <p class="text-muted small mt-2 text-center"><i class="fas fa-image"></i> Image aléatoire via picsum.photos</p>
-                </div>
             </div>
-        </div>
 
-        <!-- ============================================
-        PAGE PANNEAU PUBLICITAIRE (masquée)
-        ============================================ -->
-        <div id="page-panneau" style="display:none;">
-            <h2 class="section-title"><i class="fas fa-ad"></i> Panneau publicitaire animé</h2>
-            <p class="text-muted"><i class="fas fa-sync"></i> Les couches tournent et s'affichent en alternance.</p>
-            <div id="panneauContainer">
-                <div class="couche-pub active" style="background:#1a1f2b; color:#d4af37; font-size:2rem;">
-                    <i class="fas fa-star"></i> Star
-                </div>
-                <div class="couche-pub" style="background:#2c3e50; color:#ecf0f1;">
-                    <i class="fas fa-tags"></i> Offre spéciale
-                </div>
-                <div class="couche-pub" style="background:#d4af37; color:#1a1f2b;">
-                    <i class="fas fa-percent"></i> -30%
-                </div>
-                <div class="couche-pub" style="background:#1a1f2b; color:#fff;">
-                    <i class="fas fa-truck"></i> Livraison offerte
-                </div>
-            </div>
-            <div class="text-center mt-3">
-                <button class="btn btn-outline-gold" id="togglePanneau"><i class="fas fa-pause"></i> Pause</button>
-            </div>
-        </div>
+        </div><!-- /zoneAffichage -->
+    </main>
 
-        <!-- ============================================
-        PAGE DATATABLE (masquée)
-        ============================================ -->
-        <div id="page-datatable" style="display:none;">
-            <h2 class="section-title"><i class="fas fa-table"></i> Datatable – Gestion des produits</h2>
-
-            <table id="tableProduits" class="table table-striped table-hover" style="width:100%;">
-                <thead>
-                    <tr>
-                        <th>Désignation</th>
-                        <th>Quantité</th>
-                        <th>Prix (Ar)</th>
-                        <th>Montant (Ar)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Riz</td><td>10</td><td>4000</td><td></td></tr>
-                    <tr><td>Manioc</td><td>20</td><td>3000</td><td></td></tr>
-                    <tr><td>Sucre</td><td>50</td><td>1000</td><td></td></tr>
-                    <tr><td>Patate</td><td>40</td><td>500</td><td></td></tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th><i class="fas fa-calculator"></i> TOTAL</th>
-                        <th id="totalQte">—</th>
-                        <th></th>
-                        <th id="totalMontant">—</th>
-                    </tr>
-                </tfoot>
-            </table>
-
-            <!-- Statistiques + graphique -->
-            <div class="row g-4 mt-2">
-                <div class="col-md-5">
-                    <div class="stats-grid">
-                        <div class="stat-item"><i class="fas fa-chart-line"></i> Prix moyen : <span class="stat-value" id="prixMoyen">—</span> Ar</div>
-                        <div class="stat-item"><i class="fas fa-arrow-down"></i> Prix minimal : <span class="stat-value" id="prixMin">—</span> Ar</div>
-                        <div class="stat-item"><i class="fas fa-arrow-up"></i> Prix maximal : <span class="stat-value" id="prixMax">—</span> Ar</div>
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <canvas id="chartPrix" width="300" height="150" style="max-width:100%;"></canvas>
-                </div>
-            </div>
-        </div>
-
-    </div><!-- /zoneAffichage -->
-</main>
-
-<!-- ============================================================
+    <!-- ============================================================
 PIED DE PAGE
 ============================================================ -->
-<footer class="footer-custom">
-    <div class="container">
-        <p class="mb-0"><i class="far fa-copyright"></i> 2026 — Projet DHTML réalisé par <span>Votre Équipe</span> — Tous droits réservés</p>
-        <p class="mb-0 small" style="color:#7a808d;"><i class="fas fa-users"></i> Auteurs : <span>Nantenaina</span> · <span>Albertin</span> · <span>Nathan</span> · <span>Cicinho</span></p>
-    </div>
-</footer>
+    <footer class="footer-custom">
+        <div class="container">
+            <p class="mb-0"><i class="far fa-copyright"></i> 2026 — Projet DHTML réalisé par <span>Votre Équipe</span> —
+                Tous droits réservés</p>
+            <p class="mb-0 small" style="color:#7a808d;"><i class="fas fa-users"></i> Auteurs : <span>Nantenaina</span>
+                · <span>Albertin</span> · <span>Nathan</span> · <span>Cicinho</span></p>
+        </div>
+    </footer>
 
-<!-- ============================================================
+    <!-- ============================================================
 SCRIPTS
 ============================================================ -->
-<!-- JQUERY -->
-<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<!-- JQUERY UI -->
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-<!-- Ajoute Touch Punch -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-<!-- BOOTSTRAP 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- DATATABLES -->
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-<!-- CHART.JS -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- JQUERY UI -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <!-- Ajoute Touch Punch -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <!-- BOOTSTRAP 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DATATABLES -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <!-- CHART.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 
-<script>
-    $(function() {
+    <script>
+        $(function () {
 
-        // ============================================================
-        // 1. MENU : navigation par onglets (affichage des pages)
-        // ============================================================
-        const pages = {
-            accueil: '#page-accueil',
-            cramer: '#page-cramer',
-            resize: '#page-resize',
-            panneau: '#page-panneau',
-            datatable: '#page-datatable'
-        };
+            // ============================================================
+            // 1. MENU : navigation par onglets (affichage des pages)
+            // ============================================================
+            const pages = {
+                accueil: '#page-accueil',
+                cramer: '#page-cramer',
+                resize: '#page-resize',
+                panneau: '#page-panneau',
+                datatable: '#page-datatable'
+            };
 
-        $('#menuNav .nav-link').on('click', function(e) {
-            e.preventDefault();
-            const page = $(this).data('page');
-            $('#menuNav .nav-link').removeClass('active');
-            $(this).addClass('active');
-            Object.values(pages).forEach(sel => $(sel).hide());
-            if (pages[page]) $(pages[page]).show();
-        });
+            $('#menuNav .nav-link').on('click', function (e) {
+                e.preventDefault();
+                const page = $(this).data('page');
+                $('#menuNav .nav-link').removeClass('active');
+                $(this).addClass('active');
+                Object.values(pages).forEach(sel => $(sel).hide());
+                if (pages[page]) $(pages[page]).show();
+            });
 
-        // ============================================================
-        // 2. CRAMER
-        // ============================================================
-        function det3(m) {
-            return m[0] * (m[4] * m[8] - m[5] * m[7]) -
-                m[1] * (m[3] * m[8] - m[5] * m[6]) +
-                m[2] * (m[3] * m[7] - m[4] * m[6]);
-        }
-
-        $('#btnResolver').on('click', function() {
-            const a11 = parseFloat($('#a11').val()) || 0,
-                a12 = parseFloat($('#a12').val()) || 0,
-                a13 = parseFloat($('#a13').val()) || 0;
-            const a21 = parseFloat($('#a21').val()) || 0,
-                a22 = parseFloat($('#a22').val()) || 0,
-                a23 = parseFloat($('#a23').val()) || 0;
-            const a31 = parseFloat($('#a31').val()) || 0,
-                a32 = parseFloat($('#a32').val()) || 0,
-                a33 = parseFloat($('#a33').val()) || 0;
-            const b1 = parseFloat($('#b1').val()) || 0,
-                b2 = parseFloat($('#b2').val()) || 0,
-                b3 = parseFloat($('#b3').val()) || 0;
-
-            const M = [a11, a12, a13, a21, a22, a23, a31, a32, a33];
-            const det = det3(M);
-
-            if (Math.abs(det) < 1e-12) {
-                $('#x1,#x2,#x3').text('∞ ou impossible (det=0)');
-                $('#detailDet').html('∆ = 0 — Système non inversible ou indéterminé.');
-                return;
+            // ============================================================
+            // 2. CRAMER
+            // ============================================================
+            function det3(m) {
+                return m[0] * (m[4] * m[8] - m[5] * m[7]) -
+                    m[1] * (m[3] * m[8] - m[5] * m[6]) +
+                    m[2] * (m[3] * m[7] - m[4] * m[6]);
             }
 
-            const M1 = [b1, a12, a13, b2, a22, a23, b3, a32, a33];
-            const M2 = [a11, b1, a13, a21, b2, a23, a31, b3, a33];
-            const M3 = [a11, a12, b1, a21, a22, b2, a31, a32, b3];
 
-            const d1 = det3(M1),
-                d2 = det3(M2),
-                d3 = det3(M3);
+            // Empêcher les caractères non numériques
+            $('.coef').on('keydown', function (e) {
 
-            $('#x1').text((d1 / det).toFixed(4));
-            $('#x2').text((d2 / det).toFixed(4));
-            $('#x3').text((d3 / det).toFixed(4));
-            $('#detailDet').html(`∆ = ${det.toFixed(4)} &nbsp; ∆₁ = ${d1.toFixed(4)} &nbsp; ∆₂ = ${d2.toFixed(4)} &nbsp; ∆₃ = ${d3.toFixed(4)}`);
-        });
+                const touchesAutorisees = [
+                    'Backspace', 'Delete', 'Tab',
+                    'ArrowLeft', 'ArrowRight',
+                    'ArrowUp', 'ArrowDown',
+                    'Home', 'End'
+                ];
 
-        // ============================================================
-        // 3. REDIMENSIONNEMENT
-        // ============================================================
-        let w = 300,
-            h = 200;
+                if (touchesAutorisees.includes(e.key)) {
+                    return;
+                }
 
-        $('#sliderLargeur').slider({
-            min: 100,
-            max: 600,
-            value: w,
-            slide: function(ev, ui) {
-                w = ui.value;
+                if (e.key >= '0' && e.key <= '9') {
+                    return;
+                }
+
+                if (e.key === '-' && this.selectionStart === 0) {
+                    return;
+                }
+
+                if (e.key === '.' && !this.value.includes('.')) {
+                    return;
+                }
+
+                e.preventDefault();
+            });
+
+
+            $('#btnResolver').on('click', function () {
+
+                const a11 = parseFloat($('#a11').val()) || 0,
+                    a12 = parseFloat($('#a12').val()) || 0,
+                    a13 = parseFloat($('#a13').val()) || 0;
+
+                const a21 = parseFloat($('#a21').val()) || 0,
+                    a22 = parseFloat($('#a22').val()) || 0,
+                    a23 = parseFloat($('#a23').val()) || 0;
+
+                const a31 = parseFloat($('#a31').val()) || 0,
+                    a32 = parseFloat($('#a32').val()) || 0,
+                    a33 = parseFloat($('#a33').val()) || 0;
+
+                const b1 = parseFloat($('#b1').val()) || 0,
+                    b2 = parseFloat($('#b2').val()) || 0,
+                    b3 = parseFloat($('#b3').val()) || 0;
+
+                const M = [
+                    a11, a12, a13,
+                    a21, a22, a23,
+                    a31, a32, a33
+                ];
+
+                const det = det3(M);
+
+                if (Math.abs(det) < 1e-12) {
+                    $('#x1,#x2,#x3').text('∞ ou impossible (det=0)');
+                    $('#detailDet').html(
+                        '∆ = 0 — Système non inversible ou indéterminé.'
+                    );
+                    return;
+                }
+
+                const M1 = [
+                    b1, a12, a13,
+                    b2, a22, a23,
+                    b3, a32, a33
+                ];
+
+                const M2 = [
+                    a11, b1, a13,
+                    a21, b2, a23,
+                    a31, b3, a33
+                ];
+
+                const M3 = [
+                    a11, a12, b1,
+                    a21, a22, b2,
+                    a31, a32, b3
+                ];
+
+                const d1 = det3(M1),
+                    d2 = det3(M2),
+                    d3 = det3(M3);
+
+                $('#x1').text((d1 / det).toFixed(4));
+                $('#x2').text((d2 / det).toFixed(4));
+                $('#x3').text((d3 / det).toFixed(4));
+
+                $('#detailDet').html(
+                    `∆ = ${det.toFixed(4)} &nbsp;
+         ∆₁ = ${d1.toFixed(4)} &nbsp;
+         ∆₂ = ${d2.toFixed(4)} &nbsp;
+         ∆₃ = ${d3.toFixed(4)}`
+                );
+            });
+
+            // ============================================================
+            // 3. REDIMENSIONNEMENT
+            // ============================================================
+            let w = 300,
+                h = 200;
+
+            // Détecte le glissement sur ordinateur ET sur Android en temps réel
+            $('#sliderLargeur').on('input', function () {
+                w = $(this).val();
                 $('#largeurValue').text(w);
                 $('#imageLayer').css('width', w + 'px');
-            }
-        });
+            });
 
-        $('#sliderHauteur').slider({
-            min: 100,
-            max: 500,
-            value: h,
-            slide: function(ev, ui) {
-                h = ui.value;
+            $('#sliderHauteur').on('input', function () {
+                h = $(this).val();
                 $('#hauteurValue').text(h);
                 $('#imageLayer').css('height', h + 'px');
-            }
-        });
-
-        // ============================================================
-        // 4. PANNEAU PUBLICITAIRE
-        // ============================================================
-        let panneauInterval;
-        let panneauRunning = true;
-
-        function lancerPanneau() {
-            const couches = $('.couche-pub');
-            let index = 0;
-
-            function tourner() {
-                couches.removeClass('active');
-                couches.eq(index).addClass('active');
-                couches.each(function(i) {
-                    if (i !== index) {
-                        const angle = (i - index) * 45;
-                        $(this).css('transform', `rotate(${angle}deg) scale(0.8)`);
-                    } else {
-                        $(this).css('transform', 'rotate(0deg) scale(1)');
-                    }
-                });
-                index = (index + 1) % couches.length;
-            }
-
-            tourner();
-            if (panneauInterval) clearInterval(panneauInterval);
-            panneauInterval = setInterval(tourner, 2500);
-        }
-
-        lancerPanneau();
-
-        $('#togglePanneau').on('click', function() {
-            panneauRunning = !panneauRunning;
-            if (panneauRunning) {
-                lancerPanneau();
-                $(this).html('<i class="fas fa-pause"></i> Pause');
-            } else {
-                clearInterval(panneauInterval);
-                $(this).html('<i class="fas fa-play"></i> Reprendre');
-            }
-        });
-
-        // ============================================================
-        // 5. DATATABLE + CHART.JS
-        // ============================================================
-        function calculerMontants() {
-            $('#tableProduits tbody tr').each(function() {
-                const qte = parseFloat($(this).find('td').eq(1).text()) || 0;
-                const prix = parseFloat($(this).find('td').eq(2).text()) || 0;
-                const montant = qte * prix;
-                $(this).find('td').eq(3).text(montant.toFixed(0));
-            });
-        }
-        calculerMontants();
-
-        const table = $('#tableProduits').DataTable({
-            language: {
-                url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/fr-FR.json'
-            },
-            footerCallback: function(row, data, start, end, display) {
-                let totalQte = 0,
-                    totalMontant = 0;
-                this.api().rows({ search: 'applied' }).every(function() {
-                    const rowData = this.data();
-                    totalQte += parseFloat(rowData[1]) || 0;
-                    totalMontant += parseFloat(rowData[3]) || 0;
-                });
-                $('#totalQte').text(totalQte);
-                $('#totalMontant').text(totalMontant.toFixed(0) + ' Ar');
-            }
-        });
-
-        function mettreAJourStatsEtGraph() {
-            const prix = [];
-            $('#tableProduits tbody tr').each(function() {
-                const p = parseFloat($(this).find('td').eq(2).text()) || 0;
-                if (p > 0) prix.push(p);
-            });
-            if (prix.length === 0) return;
-
-            const sum = prix.reduce((a, b) => a + b, 0);
-            const avg = sum / prix.length;
-            const min = Math.min(...prix);
-            const max = Math.max(...prix);
-
-            $('#prixMoyen').text(avg.toFixed(0));
-            $('#prixMin').text(min);
-            $('#prixMax').text(max);
-
-            const labels = [];
-            const data = [];
-            $('#tableProduits tbody tr').each(function() {
-                labels.push($(this).find('td').eq(0).text());
-                data.push(parseFloat($(this).find('td').eq(2).text()) || 0);
             });
 
-            if (window.prixChart) window.prixChart.destroy();
 
-            const ctx = document.getElementById('chartPrix').getContext('2d');
-            window.prixChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'Prix (Ar)',
-                        data: data,
-                        backgroundColor: ['#1a1f2b', '#d4af37', '#2c3e50', '#95a5a6'],
-                        borderRadius: 6,
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { display: false } },
-                    scales: { y: { beginAtZero: true } }
+
+            // ============================================================
+            // 4. PANNEAU PUBLICITAIRE
+            // ============================================================
+            let panneauInterval;
+            let panneauRunning = true;
+
+            function lancerPanneau() {
+                const couches = $('.couche-pub');
+                let index = 0;
+
+                function tourner() {
+                    couches.removeClass('active');
+                    couches.eq(index).addClass('active');
+                    couches.each(function (i) {
+                        if (i !== index) {
+                            const angle = (i - index) * 45;
+                            $(this).css('transform', `rotate(${angle}deg) scale(0.8)`);
+                        } else {
+                            $(this).css('transform', 'rotate(0deg) scale(1)');
+                        }
+                    });
+                    index = (index + 1) % couches.length;
+                }
+
+                tourner();
+                if (panneauInterval) clearInterval(panneauInterval);
+                panneauInterval = setInterval(tourner, 2500);
+            }
+
+            lancerPanneau();
+
+            $('#togglePanneau').on('click', function () {
+                panneauRunning = !panneauRunning;
+                if (panneauRunning) {
+                    lancerPanneau();
+                    $(this).html('<i class="fas fa-pause"></i> Pause');
+                } else {
+                    clearInterval(panneauInterval);
+                    $(this).html('<i class="fas fa-play"></i> Reprendre');
                 }
             });
-        }
 
-        setTimeout(mettreAJourStatsEtGraph, 300);
-        $('#tableProduits').on('draw.dt', function() {
-            mettreAJourStatsEtGraph();
+            // ============================================================
+            // 5. DATATABLE + CHART.JS
+            // ============================================================
+            function calculerMontants() {
+
+                let totalQte = 0;
+                let totalMontant = 0;
+
+                const prix = [];
+                const labels = [];
+                const data = [];
+
+                $('#tableProduits tbody tr').each(function () {
+
+                    const qte = parseFloat($(this).find('td').eq(1).text()) || 0;
+                    const prixUnitaire = parseFloat($(this).find('td').eq(2).text()) || 0;
+
+                    // Montant de la ligne
+                    const montant = qte * prixUnitaire;
+
+                    $(this).find('td').eq(3).text(montant.toFixed(0));
+
+                    // Totaux
+                    totalQte += qte;
+                    totalMontant += montant;
+
+                    // Statistiques sur les prix unitaires
+                    if (prixUnitaire > 0) {
+                        prix.push(prixUnitaire);
+                    }
+
+                    // Graphique : montant par produit
+                    labels.push($(this).find('td').eq(0).text().trim());
+                    data.push(montant);
+                });
+
+                $('#tableProduits tbody').on(
+                    'keydown',
+                    'td[contenteditable="true"]',
+                    function (e) {
+
+                        const touchesAutorisees = [
+                            'Backspace',
+                            'Delete',
+                            'Tab',
+                            'ArrowLeft',
+                            'ArrowRight',
+                            'ArrowUp',
+                            'ArrowDown',
+                            'Home',
+                            'End'
+                        ];
+
+                        // Touches de contrôle
+                        if (touchesAutorisees.includes(e.key)) {
+                            return;
+                        }
+
+                        // Autoriser uniquement les chiffres
+                        if (e.key >= '0' && e.key <= '9') {
+                            return;
+                        }
+
+                        // Bloquer tout le reste
+                        e.preventDefault();
+                    }
+                );
+
+                // =========================
+                // TOTAL
+                // =========================
+
+                $('#totalQte').text(totalQte);
+                $('#totalMontant').text(totalMontant.toFixed(0) + ' Ar');
+
+
+                // =========================
+                // STATISTIQUES
+                // =========================
+
+                if (prix.length > 0) {
+
+                    const sommePrixPonderee = $('#tableProduits tbody tr').toArray()
+                        .reduce((total, ligne) => {
+                            const qte = parseFloat($(ligne).find('td').eq(1).text()) || 0;
+                            const prixUnitaire = parseFloat($(ligne).find('td').eq(2).text()) || 0;
+
+                            return total + (qte * prixUnitaire);
+                        }, 0);
+
+                    const prixMoyen = totalQte > 0
+                        ? sommePrixPonderee / totalQte
+                        : 0;
+
+                    const prixMinimum = Math.min(...prix);
+                    const prixMaximum = Math.max(...prix);
+
+                    $('#prixMoyen').text(prixMoyen.toFixed(0));
+                    $('#prixMin').text(prixMinimum.toFixed(0));
+                    $('#prixMax').text(prixMaximum.toFixed(0));
+                }
+
+
+                // =========================
+                // GRAPHIQUE
+                // =========================
+
+                if (window.prixChart) {
+                    window.prixChart.destroy();
+                }
+
+                const canvas = document.getElementById('chartPrix');
+
+                if (!canvas) return;
+
+                const ctx = canvas.getContext('2d');
+
+                window.prixChart = new Chart(ctx, {
+                    type: 'bar',
+
+                    data: {
+                        labels: labels,
+
+                        datasets: [{
+                            label: 'Montant (Ar)',
+                            data: data,
+
+                            backgroundColor: [
+                                '#1a1f2b',
+                                '#d4af37',
+                                '#2c3e50',
+                                '#95a5a6'
+                            ],
+
+                            borderRadius: 6
+                        }]
+                    },
+
+                    options: {
+                        responsive: true,
+
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+            calculerMontants();
+
+            const table = $('#tableProduits').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/fr-FR.json'
+                },
+                footerCallback: function (row, data, start, end, display) {
+                    let totalQte = 0,
+                        totalMontant = 0;
+                    this.api().rows({ search: 'applied' }).every(function () {
+                        const rowData = this.data();
+                        totalQte += parseFloat(rowData[1]) || 0;
+                        totalMontant += parseFloat(rowData[3]) || 0;
+                    });
+                    $('#totalQte').text(totalQte);
+                    $('#totalMontant').text(totalMontant.toFixed(0) + ' Ar');
+                }
+            });
+            $('#tableProduits tbody').on(
+                'input',
+                'td[contenteditable="true"]',
+                function () {
+                    calculerMontants();
+                }
+            );
+            $('#tableProduits tbody').on(
+                'keydown',
+                'td[contenteditable="true"]',
+                function (e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        this.blur();
+                    }
+                }
+            );
         });
-
-        $('a[data-page="datatable"]').on('click', function() {
-            setTimeout(mettreAJourStatsEtGraph, 400);
-        });
-
-    });
-</script>
+    </script>
 
 </body>
+
 </html>
