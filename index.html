@@ -509,7 +509,6 @@
             <!-- ============================================
         PAGE REDIMENSIONNER (masquée)
         ============================================ -->
-            <!-- ============================================ -->
             <div id="page-resize" style="display:none;">
                 <h2 class="section-title"><i class="fas fa-expand"></i> Redimensionner une image</h2>
                 <div class="row g-4">
@@ -797,20 +796,27 @@ SCRIPTS
             let w = 300,
                 h = 200;
 
-            // Détecte le glissement sur ordinateur ET sur Android en temps réel
-            $('#sliderLargeur').on('input', function () {
-                w = $(this).val();
-                $('#largeurValue').text(w);
-                $('#imageLayer').css('width', w + 'px');
+            $('#sliderLargeur').slider({
+                min: 100,
+                max: 600,
+                value: w,
+                slide: function (ev, ui) {
+                    w = ui.value;
+                    $('#largeurValue').text(w);
+                    $('#imageLayer').css('width', w + 'px');
+                }
             });
 
-            $('#sliderHauteur').on('input', function () {
-                h = $(this).val();
-                $('#hauteurValue').text(h);
-                $('#imageLayer').css('height', h + 'px');
+            $('#sliderHauteur').slider({
+                min: 100,
+                max: 500,
+                value: h,
+                slide: function (ev, ui) {
+                    h = ui.value;
+                    $('#hauteurValue').text(h);
+                    $('#imageLayer').css('height', h + 'px');
+                }
             });
-
-
 
             // ============================================================
             // 4. PANNEAU PUBLICITAIRE
